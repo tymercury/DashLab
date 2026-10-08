@@ -1,0 +1,59 @@
+/* CSS controls the appearance. API logic lives in app.js. */
+:root {
+  color-scheme: dark;
+  --background: #10101a;
+  --panel: #191925;
+  --text: #f5f1ef;
+  --muted: #b4afc1;
+  --accent: #bdf7bb;
+  --pink: #f5a3d7;
+  --line: #393642;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--background); color: var(--text); font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; }
+.site-header, main, footer { width: min(1100px, calc(100% - 64px)); margin: auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.wordmark { text-decoration: none; font-size: 28px; font-weight: 800; letter-spacing: -1.5px; }
+.wordmark > span:first-child { font-weight: 400; }
+.dot { color: var(--pink); }
+.header-note, .eyebrow, .photo-label { font-family: "Courier New", monospace; font-size: 12px; letter-spacing: 1.5px; }
+.header-note { color: var(--muted); }
+.intro { padding: 60px 0 32px; }
+.eyebrow { color: var(--accent); margin: 0 0 20px; line-height: 1.6; }
+h1 { font-size: clamp(48px, 6vw, 76px); line-height: 1.02; letter-spacing: -3px; margin: 0; font-weight: 700; }
+h1 span { color: var(--pink); }
+.intro-copy { color: var(--muted); font-size: 17px; line-height: 1.6; max-width: 470px; margin: 24px 0; }
+button { display: inline-flex; align-items: center; gap: 35px; background: var(--accent); color: #142014; border: 0; padding: 15px 20px; min-height: 48px; font-size: 15px; font-weight: 700; cursor: pointer; }
+button:hover { background: #d5ffd3; }
+button:disabled { cursor: wait; opacity: .7; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--pink); outline-offset: 5px; }
+.status { color: var(--muted); min-height: 22px; font-size: 14px; line-height: 1.5; }
+.status[data-error="true"] { color: #ffb1b1; }
+.recipe { display: grid; grid-template-columns: .9fr 1.1fr; background: var(--panel); border: 1px solid var(--line); margin-bottom: 48px; }
+.photo-panel { position: relative; min-height: 340px; background: #242030; }
+.photo-panel img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-label { position: absolute; bottom: 20px; left: 20px; background: #10101a; color: var(--text); padding: 10px 12px; }
+#image-note { padding: 32px; color: var(--muted); }
+.recipe-content { padding: 36px; }
+.recipe-content .eyebrow { margin-bottom: 10px; }
+h2 { font-size: 42px; letter-spacing: -1.5px; margin: 0 0 10px; overflow-wrap: anywhere; }
+.glass { color: var(--muted); margin: 0 0 30px; font-size: 14px; }
+h3 { font-size: 16px; margin: 28px 0 12px; }
+.ingredients { padding: 0; margin: 0; list-style: none; }
+.ingredients li { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.4; }
+.ingredients .measure { color: var(--accent); text-align: right; }
+.instructions { color: var(--muted); font-size: 15px; line-height: 1.8; white-space: pre-line; }
+footer { display: flex; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); padding: 24px 0 30px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+@media (max-width: 650px) {
+  .site-header, main, footer { width: calc(100% - 36px); }
+  .header-note { display: none; }
+  .intro { padding-top: 40px; }
+  .recipe { grid-template-columns: 1fr; }
+  .photo-panel { min-height: 0; }
+  .photo-panel img { aspect-ratio: 1; }
+  .recipe-content { padding: 25px; }
+  footer { flex-direction: column; gap: 8px; }
+}

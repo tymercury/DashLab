@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A little curiosity. A new mix. Find your next cocktail at DashLab, your after-hours recipe lab.">
+  <meta name="theme-color" content="#14111d">
+  <title>DashLab — A little curiosity. A new mix.</title>
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to cocktails</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="DashLab home"><span class="logo-icon" aria-hidden="true">✳</span> Dash<span>Lab</span><i>.</i></a>
+    <nav aria-label="Main navigation"><a class="nav-link" href="#collection" id="explore-nav">Explore</a><a class="nav-link" href="#field-notes">The basics</a><button id="saved-nav" class="saved-nav">♡ <span>My recipes</span> <b id="saved-count">0</b></button></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> YOUR AFTER-HOURS COCKTAIL LAB</p>
+        <h1 id="page-title">Good nights<br>start with<br><em>a little curiosity.</em></h1>
+        <p class="hero-description">Find a new favourite. Get to know your ingredients.<br class="desktop-break"> Make something worth staying in for.</p>
+        <div class="hero-actions"><a class="button primary" href="#collection">Find your next mix <span aria-hidden="true">↗</span></a><button class="text-button" id="random-hero"><span aria-hidden="true">⚄</span> Surprise me</button></div>
+        <p class="hero-footnote">REAL RECIPES. ROOM TO EXPERIMENT.</p>
+      </div>
+      <figure class="hero-art"><img src="assets/night-bar.png" alt="An illustrated neon-lit cocktail bar overlooking a rainy futuristic city" width="1536" height="1024"><div class="scene-top"><span>THE DASHLAB / NIGHT SHIFT</span><span aria-hidden="true">▦</span></div><figcaption><span><i class="live-dot"></i> THE BAR IS YOURS.</span><span>TAKE A SEAT ↙</span></figcaption></figure>
+    </section>
+    <div class="ticker" aria-hidden="true"><span>A DASH OF CURIOSITY</span><b>✳</b><span>A SPLASH OF POSSIBILITY</span><b>✳</b><span>YOUR NEXT FAVOURITE AWAITS</span><b>✳</b></div>
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / EXPLORE THE MENU</p><h2 id="collection-title">What’s your starting spirit?</h2></div><p>Pick a bottle. Follow your curiosity.</p></div>
+      <div class="spirit-grid" id="spirits" aria-label="Browse by base spirit">
+        <button class="spirit active" data-spirit="" aria-pressed="true"><span class="spirit-symbol" aria-hidden="true">✳</span><span>House picks</span><small>A GOOD PLACE TO START</small></button>
+        <button class="spirit" data-spirit="Gin" aria-pressed="false"><span class="bottle gin" aria-hidden="true"></span><span>Gin</span><small>BOTANICAL & BOLD</small></button>
+        <button class="spirit" data-spirit="Vodka" aria-pressed="false"><span class="bottle vodka" aria-hidden="true"></span><span>Vodka</span><small>A CLEAN CANVAS</small></button>
+        <button class="spirit" data-spirit="Light rum" aria-pressed="false"><span class="bottle rum" aria-hidden="true"></span><span>Light rum</span><small>A TROPICAL START</small></button>
+        <button class="spirit" data-spirit="Tequila" aria-pressed="false"><span class="bottle tequila" aria-hidden="true"></span><span>Tequila</span><small>AN AGAVE AFFAIR</small></button>
+        <button class="spirit" data-spirit="Bourbon" aria-pressed="false"><span class="bottle bourbon" aria-hidden="true"></span><span>Bourbon</span><small>THE WARM SIDE</small></button>
+      </div>
+      <div class="menu-toolbar"><div class="view-controls"><button id="browse-view" aria-pressed="true">Discover</button><button id="saved-view" aria-pressed="false">Saved recipes</button></div><form id="search-form" role="search"><label class="sr-only" for="search-input">Search cocktails by name</label><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Find a cocktail by name…" maxlength="100" autocomplete="off"><button type="submit" aria-label="Search cocktails">↗</button></form></div>
+      <div class="results-heading"><h3 id="results-title">Tonight’s house picks</h3><label class="sort-label">Sort by <select id="sort"><option value="default">Featured</option><option value="az">Name: A–Z</option><option value="za">Name: Z–A</option></select></label></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="cards" class="cards" aria-busy="false"></div>
+      <div id="empty" class="empty" hidden><span aria-hidden="true">✳</span><h3 id="empty-title"></h3><p id="empty-message"></p><button id="reset-view" class="button primary">Back to house picks ↗</button></div>
+      <button id="retry" class="button secondary" hidden>Try again ↻</button>
+    </section>
+    <section class="field-notes" id="field-notes" aria-labelledby="notes-title"><div class="notes-intro"><p class="eyebrow">02 / A LITTLE BAR KNOW-HOW</p><h2 id="notes-title">Every good mix<br>starts somewhere.</h2><p>No bar cart expertise required.<br>Just a recipe and a little attention.</p></div><div class="notes-list"><details><summary><span class="note-number">01</span> Read the whole recipe first <span class="plus" aria-hidden="true">+</span></summary><p>Check the ingredients, amounts and method before you start. Set out your glass and tools so everything is within reach.</p></details><details><summary><span class="note-number">02</span> Match ingredients with measures <span class="plus" aria-hidden="true">+</span></summary><p>Each ingredient has its own amount. Use the checklist in a recipe to keep track. If an amount is missing, DashLab shows “Not specified” rather than guessing.</p></details><details><summary><span class="note-number">03</span> Make room for your next favourite <span class="plus" aria-hidden="true">+</span></summary><p>Tap the heart to keep a recipe on this browser. Your saved collection stays here when you return. Start with a familiar drink, then explore a new base spirit.</p></details></div></section>
+    <section class="closing"><span class="closing-icon" aria-hidden="true">✳</span><div><p class="eyebrow">THE BEST DISCOVERY IS THE NEXT ONE.</p><h2>Let the night surprise you.</h2></div><button class="button secondary" id="random-bottom">Pick a random cocktail <span aria-hidden="true">↗</span></button></section>
+  </main>
+  <footer class="wrap"><a class="wordmark" href="./">Dash<span>Lab</span><i>.</i></a><p>A little curiosity. A new mix.</p><a href="https://www.thecocktaildb.com/" target="_blank" rel="noreferrer">Recipes & photos by TheCocktailDB ↗</a><span>EXPLORE THOUGHTFULLY. SIP RESPONSIBLY.</span></footer>
+  <dialog id="recipe-dialog" aria-labelledby="drink-name"><div class="dialog-top"><span class="eyebrow">DASHLAB / RECIPE FILE</span><button id="close-dialog" class="icon-button" aria-label="Close recipe">×</button></div><div id="detail-status" role="status"></div><div id="recipe-content" hidden><div class="detail-layout"><div class="detail-photo"><img id="detail-image" alt="" width="500" height="500"><p id="photo-credit"></p></div><div class="detail-copy"><p class="eyebrow" id="drink-category"></p><h2 id="drink-name"></h2><p id="drink-glass" class="muted"></p><button id="save-detail" class="button secondary"></button><h3>The ingredients <span id="check-progress">0 ready</span></h3><p class="check-hint">Check off what you have ready.</p><ul id="ingredients"></ul><h3>Make the mix</h3><p id="instructions"></p></div></div></div><button id="detail-retry" class="button secondary" hidden>Retry recipe ↻</button></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="wrap">Please enable JavaScript to browse cocktail recipes.</p></noscript>
+</body>
+</html>

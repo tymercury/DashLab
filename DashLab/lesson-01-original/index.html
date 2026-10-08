@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DashLab — First Pour</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./">Dash<span>Lab</span><span class="dot">.</span></a>
+      <span class="header-note">A LITTLE CURIOSITY. A NEW MIX.</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">EXPERIMENT 001 / FIRST POUR</p>
+        <h1 id="page-title">Meet your<br /><span>first mix.</span></h1>
+        <p class="intro-copy">Start with a Mojito. Explore the ingredients, follow the recipe, and make it your own.</p>
+        <button id="load-button" type="button">Load Mojito <span aria-hidden="true">↗</span></button>
+        <p id="status" class="status" role="status" aria-live="polite">Your first recipe is one click away.</p>
+      </section>
+
+      <!-- JavaScript fills these empty elements with real API data. -->
+      <article id="recipe" class="recipe" hidden aria-labelledby="drink-name">
+        <div class="photo-panel">
+          <img id="drink-image" alt="" width="600" height="600" hidden />
+          <p id="image-note" hidden>Image unavailable.</p>
+          <span class="photo-label">THE FIRST POUR</span>
+        </div>
+        <div class="recipe-content">
+          <p id="drink-category" class="eyebrow"></p>
+          <h2 id="drink-name"></h2>
+          <p id="drink-glass" class="glass"></p>
+          <h3>What goes in</h3>
+          <ul id="ingredients" class="ingredients"></ul>
+          <h3>Make the mix</h3>
+          <p id="instructions" class="instructions"></p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <span>DashLab / A cocktail discovery experiment</span>
+      <a href="https://www.thecocktaildb.com/" target="_blank" rel="noreferrer">Recipe &amp; photography: TheCocktailDB ↗</a>
+    </footer>
+  </body>
+</html>
